@@ -45,7 +45,7 @@ class ViewController: UIViewController {
        aView.backgroundColor = UIColor.red
        view.addSubview(aView)
        
-       /// 简单动画 
+       /// 缩放动画 
        /// scale Animation
        aView.ba.create(animation: .scale(from: CGPoint(x: 1.0, y: 1.0), to: CGPoint(x: 0.4, y: 0.5))).delay(2.0).run()
     }
@@ -97,6 +97,40 @@ class ViewController: UIViewController {
 		/// animation group 动画组
         cView.ba.create(animation: [animation1, animation2, animation3]).delay(3.0).duration(2.0).repeatCount(9999).isReverses(true).run()
         
+    }
+}
+```
+
+
+#### Example 4: animation group  / 示例 4
+
+```swift
+import BasicAnimation
+
+class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let dView = UIView(frame: CGRect(x: 0, y: 00, width: 120, height: 120))
+        dView.backgroundColor = UIColor.yellow
+        view.addSubview(dView)
+
+          ///
+        let animation4 = BAAnimation.rotationZ(from: 0, to: Float.pi * 2.0).create()
+        let animation5 = BAAnimation.position(from: dView.center, to: CGPoint(x: 300, y: 400)).create()
+
+        let groupAnimation = dView.ba.create(animation: [animation4, animation5])
+     
+        groupAnimation.delay(3.0)
+            .duration(2.0)
+            .timingCurve(.easeInEaseOut)
+            .repeatCount(9999)
+            .isReverses(true)
+            .run()
+        
+        /// Maybe
+        // dView.ba.removeAnimation(animation: groupAnimation)
     }
 }
 ```
