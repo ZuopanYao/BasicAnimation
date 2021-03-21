@@ -7,8 +7,8 @@ iOS 属性动画：缩放、旋转、平移、背景颜色、透明度、阴影�
 
 ## Requirements / 使用条件
 
-- iOS 10.0+ / Mac OS X 12.2+ 
-- Xcode 10.2+
+- iOS 10.0+
+- Xcode 12.2+
 - Swift 5.0+
 
 
