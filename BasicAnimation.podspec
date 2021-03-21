@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
   iOS 属性动画：缩放、旋转、平移、背景颜色、透明度、阴影等，使用 Swift 5.0 实现。
                      DESC
 
-  spec.homepage     = "https://github.com/ZuopanYao/BasicKit"
+  spec.homepage     = "https://github.com/ZuopanYao/BasicAnimation.git"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -69,7 +69,7 @@ Pod::Spec.new do |spec|
 
   #  When using multiple platforms
   spec.ios.deployment_target = "10.0"
-  spec.osx.deployment_target = "10.12"
+  #spec.osx.deployment_target = "10.12"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/ZuopanYao/BasicKit.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/ZuopanYao/BasicAnimation.git", :tag => "#{spec.version}" }
   spec.swift_versions = "5.0"
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -134,7 +134,7 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "> 1.4"
-  spec.dependency "Alamofire", ">= 4.9.1"
-  spec.dependency "KeychainAccess", ">= 4.1.0"
+  #spec.dependency "Alamofire", ">= 4.9.1"
+  #spec.dependency "KeychainAccess", ">= 4.1.0"
 
 end
