@@ -22,9 +22,9 @@ pod 'BasicAnimation'
 
 ### Manually / 手动安装
 
-If you prefer not to use either of the aforementioned dependency managers, you can integrate SnapKit into your project manually.
+If you prefer not to use either of the aforementioned dependency managers, you can integrate BasicAnimation into your project manually.
 
-如果您不喜欢以上管理依赖库的方式，则可以手动将 BasicKit 集成到项目中。
+如果您不喜欢以上管理依赖库的方式，则可以手动将 BasicAnimation 集成到项目中。
 
 
 ## Usage / 使用
