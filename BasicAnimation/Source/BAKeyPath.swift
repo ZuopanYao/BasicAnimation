@@ -34,6 +34,9 @@ public enum BAKeyPath: String {
     /// z轴平面移动
     case translationZ = "transform.translation.z"
     
+    /// CATransform3D
+    case transform = "transform"
+    
     /// 层级级别(值越大层级越高, 越接近顶层)
     case zPosition = "zPosition"
 
@@ -56,9 +59,9 @@ public enum BAKeyPath: String {
     case hidden = "hidden"
     
     /// 遮罩 (CALayer)
-    case mask = "mask"
+    //case doubleSided = "doubleSided"
     /// 是否将子层剪裁到层的边界
-    case masksToBounds = "masksToBounds"
+    //case masksToBounds = "masksToBounds"
     
     /// CALayer在父层中的位置
     case position = "position"

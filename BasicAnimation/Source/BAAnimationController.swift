@@ -12,7 +12,7 @@ protocol BAAnimationBase {
     /// 执行动画
     func run()
     
-    /// 设置动画时间，默认为 0.35
+    /// 设置动画时间，默认为 0.25
     func duration(_ value: Float) -> Self
     
     /// 是否启用回退动画，true = 启用，默认为false
@@ -52,7 +52,7 @@ public class BAAnimationController: BAAnimationBase {
         self.animation.toValue = change.to
         
         // 每次动画时间，必须设置
-        //self.animation.duration = 0.35
+        self.animation.duration = 0.25
         
         self.animation.fillMode = .forwards
         

@@ -33,6 +33,8 @@ public enum BAAnimation {
     case translationY(from: Float, to: Float)
     /// Z 轴平移
     case translationZ(from: Float, to: Float)
+    /// CATransform3D
+    case transform(from: CATransform3D, to: CATransform3D)
     
     ///
     case zPosition(from: Int, to: Int)
@@ -55,11 +57,11 @@ public enum BAAnimation {
     ///
     case hidden(from: Bool, to: Bool)
     
-    /// 遮罩
-    case mask(from: CALayer, to: CALayer)
-    /// 是否将子层剪裁到层的边界
-    case masksToBounds(from: Bool, to: Bool)
-    
+//    /// 遮罩
+//    case mask(from: CALayer, to: CALayer)
+//    /// 是否将子层剪裁到层的边界
+ //   case doubleSided(from: Bool, to: Bool)
+//    
     /// CALayer在父层中的位置
     case position(from: CGPoint, to: CGPoint)
     
@@ -160,13 +162,13 @@ public enum BAAnimation {
             key = .hidden
             action = (from, to)
             
-        case .mask(let from, let to):
-            key = .mask
-            action = (from, to)
-            
-        case .masksToBounds(let from, let to):
-            key = .masksToBounds
-            action = (from, to)
+//        case .mask(let from, let to):
+//            key = .mask
+//            action = (from, to)
+//            
+//        case .doubleSided(let from, let to):
+//            key = .doubleSided
+//            action = (from, to)
             
         case .position(let from, let to):
             key = .position
@@ -186,6 +188,10 @@ public enum BAAnimation {
             
         case .shadowRadius(let from, let to):
             key = .shadowRadius
+            action = (from, to)
+            
+        case .transform(let from, let to):
+            key = .transform
             action = (from, to)
         }
         
