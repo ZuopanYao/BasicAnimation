@@ -37,22 +37,31 @@ public class BAAnimationController: BAAnimationBase {
     var onView: UIView?
     var delayValue: Double = 0.0
     
-    init(onView: UIView? = nil, change: Change, keyPath: BAKeyPath) {
+    init(onView: UIView? = nil, change: Change, spring: BASpring?, keyPath: BAKeyPath) {
         
         self.keyPath = keyPath
         self.change = change
         self.onView = onView
         
-        self.animation = CABasicAnimation(keyPath: keyPath.rawValue)
-        
+        if let spring = spring {
+           let springAnimation = CASpringAnimation(keyPath: keyPath.rawValue)
+            springAnimation.damping = CGFloat(spring.damping)
+            springAnimation.initialVelocity = CGFloat(spring.initialVelocity)
+            springAnimation.mass = CGFloat(spring.mass)
+            springAnimation.stiffness = CGFloat(spring.stiffness)
+            self.animation = springAnimation
+            self.animation.duration = springAnimation.settlingDuration
+        }else {
+            self.animation = CABasicAnimation(keyPath: keyPath.rawValue)
+            // 每次动画时间，必须设置
+            self.animation.duration = 0.25
+        }
+                
         // 动画初始值(状态)，必须设置
         self.animation.fromValue = change.from
         
         // 动画结束值(状态)，必须设置
         self.animation.toValue = change.to
-        
-        // 每次动画时间，必须设置
-        self.animation.duration = 0.25
         
         self.animation.fillMode = .forwards
         
@@ -69,6 +78,14 @@ public class BAAnimationController: BAAnimationBase {
     
     /// 设置动画时间
     public func duration(_ value: Float) -> Self {
+        
+        if animation.isMember(of: CASpringAnimation.self) {
+            let settlingDuration = (animation as! CASpringAnimation).settlingDuration
+            guard Double(value) > settlingDuration  else {
+                return self
+            }
+        }
+        
         animation.duration = CFTimeInterval(value)
         return self
     }

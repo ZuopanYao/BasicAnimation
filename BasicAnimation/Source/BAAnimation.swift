@@ -75,7 +75,7 @@ public enum BAAnimation {
     case shadowRadius(from: Float, to: Float)
     
     /// 创建动画控制器
-    public func create() -> BAAnimationController {
+    public func create(spring: BASpring? = nil) -> BAAnimationController {
         
         var key: BAKeyPath!
         var action: (from: Any, to: Any)!
@@ -195,15 +195,15 @@ public enum BAAnimation {
             action = (from, to)
         }
         
-        return BAAnimationController(change: action, keyPath: key)
+        return BAAnimationController(change: action, spring: spring, keyPath: key)
     }
 }
 
 public extension BasicAnimation where Base: UIView {
     
     /// 创建动画控制器
-    func create(animation: BAAnimation) -> BAAnimationController {
-        let animation = animation.create()
+    func create(animation: BAAnimation, spring: BASpring? = nil) -> BAAnimationController {
+        let animation = animation.create(spring: spring)
         animation.onView = self.base
         return animation
     }

@@ -13,6 +13,7 @@
 		B92809772607176C0027AE13 /* BATimingCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92809722607176C0027AE13 /* BATimingCurve.swift */; };
 		B92809782607176C0027AE13 /* BasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92809732607176C0027AE13 /* BasicAnimation.swift */; };
 		B92809792607176C0027AE13 /* BAAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92809742607176C0027AE13 /* BAAnimation.swift */; };
+		B9841381263BFE6F0067B069 /* BASpring.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9841380263BFE6F0067B069 /* BASpring.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B92809722607176C0027AE13 /* BATimingCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BATimingCurve.swift; sourceTree = "<group>"; };
 		B92809732607176C0027AE13 /* BasicAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAnimation.swift; sourceTree = "<group>"; };
 		B92809742607176C0027AE13 /* BAAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAAnimation.swift; sourceTree = "<group>"; };
+		B9841380263BFE6F0067B069 /* BASpring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASpring.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			children = (
 				B92809702607176C0027AE13 /* BAAnimationController.swift */,
 				B92809712607176C0027AE13 /* BAKeyPath.swift */,
+				B9841380263BFE6F0067B069 /* BASpring.swift */,
 				B92809722607176C0027AE13 /* BATimingCurve.swift */,
 				B92809732607176C0027AE13 /* BasicAnimation.swift */,
 				B92809742607176C0027AE13 /* BAAnimation.swift */,
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B92809792607176C0027AE13 /* BAAnimation.swift in Sources */,
+				B9841381263BFE6F0067B069 /* BASpring.swift in Sources */,
 				B92809752607176C0027AE13 /* BAAnimationController.swift in Sources */,
 				B92809782607176C0027AE13 /* BasicAnimation.swift in Sources */,
 				B92809772607176C0027AE13 /* BATimingCurve.swift in Sources */,

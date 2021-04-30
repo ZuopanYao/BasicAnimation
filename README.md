@@ -135,6 +135,22 @@ class ViewController: UIViewController {
 }
 ```
 
+### Spring Animation
+
+```
+
+/// Simple
+ myView.ba.create(animation: 
+					 .position(from: myView.center, to:CGPoint(x: 200, y: 200)), 
+				 spring: .default).run()
+ 
+/// custom
+let mySpring = BASpring(10.0, mass: 2.0, stiffness: 100.0, damping: 5.0)
+myView.ba.create(animation:
+                .position(from: myView.center, to:CGPoint(x: 200, y: 200)),
+            spring: mySpring).run()
+
+```
 
 ## License / 许可证
 
