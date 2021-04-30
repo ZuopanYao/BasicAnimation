@@ -137,7 +137,7 @@ class ViewController: UIViewController {
 
 ### Spring Animation
 
-```
+```swift
 
 /// Simple
  myView.ba.create(animation: 
