@@ -47,7 +47,8 @@ class ViewController: UIViewController {
        
        /// 缩放动画 
        /// scale Animation
-       aView.ba.create(animation: .scale(from: CGPoint(x: 1.0, y: 1.0), to: CGPoint(x: 0.4, y: 0.5))).delay(2.0).run()
+       let animation = BAAnimation.scale(from: CGPoint(x: 1.0, y: 1.0), to: CGPoint(x: 0.4, y: 0.5))
+       aView.ba.create(animation: animation).delay(2.0).run()
     }
 }
 ```
