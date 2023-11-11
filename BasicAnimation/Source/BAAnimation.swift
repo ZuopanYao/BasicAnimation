@@ -10,7 +10,7 @@ import UIKit
 public enum BAAnimation {
     
     /// X、Y 轴缩放
-    case scale(from: CGPoint, to: CGPoint)
+    case scale(from: Float, to: Float)
     /// X轴缩放
     case scaleX(from: Float, to: Float)
     /// Y轴缩放

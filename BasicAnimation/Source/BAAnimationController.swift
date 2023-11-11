@@ -76,7 +76,7 @@ public class BAAnimationController: BAAnimationBase {
         onView?.layer.add(animation, forKey: keyPath.rawValue)
     }
     
-    /// 设置动画时间
+    /// 设置动画时间,默认0.25
     public func duration(_ value: Float) -> Self {
         
         if animation.isMember(of: CASpringAnimation.self) {
@@ -117,6 +117,17 @@ public class BAAnimationController: BAAnimationBase {
         return self
     }
     
+    public func fillMode(fillMode: CAMediaTimingFillMode) -> Self {
+        animation.fillMode = fillMode
+        return self
+    }
+    
+    /// YES=动画结束时从layer移除
+    public func isRemovedOnCompletion(_ isRemovedOnCompletion: Bool) -> Self {
+        animation.isRemovedOnCompletion = isRemovedOnCompletion
+        return self
+    }
+
     func totalDuration() -> Double {
         
         var single = animation.duration * Double(animation.repeatCount > 0.0 ? animation.repeatCount : 1.0)
