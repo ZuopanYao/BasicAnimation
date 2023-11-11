@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "BasicAnimation"
-  spec.version      = "0.1.2"
+  spec.version      = "0.1.3"
   spec.summary      = "iOS 属性动画：缩放、旋转、平移、背景颜色、透明度、阴影等，使用 Swift 5.0 实现"
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/ZuopanYao/BasicAnimation.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://gitee.com/harvey520/basic-animation.git", :tag => "#{spec.version}" }
   spec.swift_versions = "5.0"
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
