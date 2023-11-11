@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B928094226059F940027AE13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928094126059F940027AE13 /* AppDelegate.swift */; };
-		B928094426059F940027AE13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928094326059F940027AE13 /* SceneDelegate.swift */; };
 		B928094626059F940027AE13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B928094526059F940027AE13 /* ViewController.swift */; };
 		B928094926059F940027AE13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B928094726059F940027AE13 /* Main.storyboard */; };
 		B928094B26059F970027AE13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B928094A26059F970027AE13 /* Assets.xcassets */; };
@@ -17,6 +16,7 @@
 		B928095926059FB80027AE13 /* BasicAnimation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B928095726059FB80027AE13 /* BasicAnimation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B971290C2618A5BE00F95BC8 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B971290A2618A5BD00F95BC8 /* 1@2x.png */; };
 		B971290D2618A5BE00F95BC8 /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B971290B2618A5BE00F95BC8 /* 2@2x.png */; };
+		B99B31FF2AFF0A36008E8EDA /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B31FE2AFF0A36008E8EDA /* AnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		B928093E26059F940027AE13 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B928094126059F940027AE13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B928094326059F940027AE13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B928094526059F940027AE13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B928094826059F940027AE13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B928094A26059F970027AE13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		B928095726059FB80027AE13 /* BasicAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BasicAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B971290A2618A5BD00F95BC8 /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
 		B971290B2618A5BE00F95BC8 /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@2x.png"; sourceTree = "<group>"; };
+		B99B31FE2AFF0A36008E8EDA /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +80,10 @@
 			isa = PBXGroup;
 			children = (
 				B928094126059F940027AE13 /* AppDelegate.swift */,
-				B928094326059F940027AE13 /* SceneDelegate.swift */,
 				B971290A2618A5BD00F95BC8 /* 1@2x.png */,
 				B971290B2618A5BE00F95BC8 /* 2@2x.png */,
 				B928094526059F940027AE13 /* ViewController.swift */,
+				B99B31FE2AFF0A36008E8EDA /* AnimationView.swift */,
 				B928094726059F940027AE13 /* Main.storyboard */,
 				B928094A26059F970027AE13 /* Assets.xcassets */,
 				B928094C26059F970027AE13 /* LaunchScreen.storyboard */,
@@ -174,8 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B928094626059F940027AE13 /* ViewController.swift in Sources */,
+				B99B31FF2AFF0A36008E8EDA /* AnimationView.swift in Sources */,
 				B928094226059F940027AE13 /* AppDelegate.swift in Sources */,
-				B928094426059F940027AE13 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
