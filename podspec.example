@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/ZuopanYao/BasicAnimation.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://gitee.com/harvey520/basic-animation.git", :tag => "#{spec.version}" }
   spec.swift_versions = "5.0"
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
