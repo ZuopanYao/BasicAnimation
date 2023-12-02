@@ -35,15 +35,16 @@ class AnimationView: AnimationBaseView {
     func show() {
         UIApplication.shared.delegate?.window??.addSubview(self)
         
-        let scaleAnimtion = BAAnimation.scale(from: 0.5, to: 1.0)
-       
-        let controller = contentView.ba
-            .create(animation: scaleAnimtion)
-        controller.fillMode(fillMode: .both).run()
-        
-        let mySpring = BASpring(3.0, mass: 1.0, stiffness: 50.0, damping: 5.0)
-        let animation = BAAnimation.position(from: CGPoint(x: contentView.center.x, y: contentView.center.y - 200), to:center)
-        contentView.ba.create(animation: animation, spring: mySpring).fillMode(fillMode: .both).run()
+//        let scaleAnimtion = BAAnimation.scale(from: 0.5, to: 1.0)
+//        
+//        
+//        let controller = contentView.ba
+//            .create(animation: scaleAnimtion)
+//        controller.fillMode(fillMode: .both).run()
+//        
+//        let mySpring = BASpring(3.0, mass: 1.0, stiffness: 50.0, damping: 5.0)
+//        let animation = BAAnimation.position(from: CGPoint(x: contentView.center.x, y: contentView.center.y - 200), to:center)
+//        contentView.ba.create(animation: animation, spring: mySpring).fillMode(fillMode: .both).run()
         
     }
     

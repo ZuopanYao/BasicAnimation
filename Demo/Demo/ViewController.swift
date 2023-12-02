@@ -17,42 +17,67 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-//        aView = UIView(frame: CGRect(x: 100, y: 80, width: 180, height: 80))
-//        aView.backgroundColor = UIColor.red
-//        view.addSubview(aView)
-//        
-//        myView = UIView(frame: CGRect(x: 100, y: 230, width: 120, height: 120))
-//        myView.backgroundColor = UIColor.blue
-//        view.addSubview(myView)
-//
-//        
-//        cView = UIView(frame: CGRect(x: 130, y: 400, width: 120, height: 120))
-//        cView.backgroundColor = UIColor.purple
-//        cView.layer.shadowOffset = .zero
-//        view.addSubview(cView)
-//        
-//        dView = UIView(frame: CGRect(x: 0, y: 00, width: 120, height: 120))
-//        dView.backgroundColor = UIColor.yellow
-//        view.addSubview(dView)
+        aView = UIView(frame: CGRect(x: 100, y: 80, width: 180, height: 180))
+        aView.backgroundColor = UIColor.red
+        view.addSubview(aView)
+        
+        myView = UIView(frame: CGRect(x: 100, y: 230, width: 120, height: 120))
+        myView.backgroundColor = UIColor.blue
+        view.addSubview(myView)
+
+        
+        cView = UIView(frame: CGRect(x: 130, y: 400, width: 120, height: 120))
+        cView.backgroundColor = UIColor.purple
+        cView.layer.shadowOffset = .zero
+        view.addSubview(cView)
+        
+        dView = UIView(frame: CGRect(x: 0, y: 00, width: 120, height: 120))
+        dView.backgroundColor = UIColor.yellow
+        view.addSubview(dView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        let btn = UIButton(type: .custom)
-        btn.setTitle("Scale", for: .normal)
-        btn.setTitleColor(.red, for: .normal)
-        btn.frame = view.bounds
-        view.addSubview(btn)
-        
-        btn.addTarget(self, action: #selector(dodo), for: .touchUpInside)
+//        super.viewDidAppear(animated)
+//        let btn = UIButton(type: .custom)
+//        btn.setTitle("Scale", for: .normal)
+//        btn.setTitleColor(.red, for: .normal)
+//        btn.frame = waveView.bounds
+//        view.addSubview(btn)
+//        
+//        btn.addTarget(self, action: #selector(dodo), for: .touchUpInside)
         
 //        let scaleAnimtion = BAAnimation.scale(from: CGPoint(x: 1.0, y: 1.0), to: CGPoint(x: 0.4, y: 0.5))
 //        let controller = aView.ba.create(animation: scaleAnimtion)
 //        controller.delay(2.0).run()
         
-        /// 简单动画
+        let from = UIBezierPath(ovalIn: CGRect(origin: .zero, size: CGSize(width: 180, height: 180)))
+        
+        let to = UIBezierPath(ovalIn: CGRect(origin: .zero, size: CGSize(width: 80, height: 80)))
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = from.cgPath
+//        aView.layer.mask = shapeLayer
+        
+        // 简单动画
+        let pathAnimater = BAAnimater(.translationX.fromValue(0).toValue(100))
+        pathAnimater
+            .spring(BASpring(3.0, mass: 4.5, stiffness: 100, damping: 20))
+//        pathAnimater.run(on: aView)
+//        { [unowned self] flag in
+//            print(flag)
+////            aView.layer.mask = nil
+//        }
+        
+        let saceAnimater = BAAnimater(.scale.fromValue(1.0).toValue(0.5))
+
+        BAGroupAnimater([pathAnimater, saceAnimater].map { $0.animation })
+            .duration(1.5)
+            .delay(3)
+            .run(on: aView) { flag in
+                print(flag)
+            }
+        
 //        aView.ba.create(animation: .scale(from: CGPoint(x: 1.0, y: 1.0), to: CGPoint(x: 0.4, y: 0.5))).delay(2.0).run()
 
         

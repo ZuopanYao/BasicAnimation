@@ -8,24 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		B928092D26059EEA0027AE13 /* BasicAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B928092B26059EEA0027AE13 /* BasicAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B92809752607176C0027AE13 /* BAAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92809702607176C0027AE13 /* BAAnimationController.swift */; };
-		B92809762607176C0027AE13 /* BAKeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92809712607176C0027AE13 /* BAKeyPath.swift */; };
 		B92809772607176C0027AE13 /* BATimingCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92809722607176C0027AE13 /* BATimingCurve.swift */; };
-		B92809782607176C0027AE13 /* BasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92809732607176C0027AE13 /* BasicAnimation.swift */; };
-		B92809792607176C0027AE13 /* BAAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92809742607176C0027AE13 /* BAAnimation.swift */; };
 		B9841381263BFE6F0067B069 /* BASpring.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9841380263BFE6F0067B069 /* BASpring.swift */; };
+		B9C7C1402B1B5CDF0019C0A6 /* BAAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7C13F2B1B5CDF0019C0A6 /* BAAnimation.swift */; };
+		B9C7C1442B1B657D0019C0A6 /* BAAnimater.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C7C1432B1B657D0019C0A6 /* BAAnimater.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B928092826059EEA0027AE13 /* BasicAnimation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BasicAnimation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B928092B26059EEA0027AE13 /* BasicAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicAnimation.h; sourceTree = "<group>"; };
 		B928092C26059EEA0027AE13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B92809702607176C0027AE13 /* BAAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAAnimationController.swift; sourceTree = "<group>"; };
-		B92809712607176C0027AE13 /* BAKeyPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAKeyPath.swift; sourceTree = "<group>"; };
 		B92809722607176C0027AE13 /* BATimingCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BATimingCurve.swift; sourceTree = "<group>"; };
-		B92809732607176C0027AE13 /* BasicAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAnimation.swift; sourceTree = "<group>"; };
-		B92809742607176C0027AE13 /* BAAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BAAnimation.swift; sourceTree = "<group>"; };
 		B9841380263BFE6F0067B069 /* BASpring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASpring.swift; sourceTree = "<group>"; };
+		B9C7C13F2B1B5CDF0019C0A6 /* BAAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAAnimation.swift; sourceTree = "<group>"; };
+		B9C7C1432B1B657D0019C0A6 /* BAAnimater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAAnimater.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +64,10 @@
 		B928096F2607176C0027AE13 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				B92809702607176C0027AE13 /* BAAnimationController.swift */,
-				B92809712607176C0027AE13 /* BAKeyPath.swift */,
 				B9841380263BFE6F0067B069 /* BASpring.swift */,
 				B92809722607176C0027AE13 /* BATimingCurve.swift */,
-				B92809732607176C0027AE13 /* BasicAnimation.swift */,
-				B92809742607176C0027AE13 /* BAAnimation.swift */,
+				B9C7C1432B1B657D0019C0A6 /* BAAnimater.swift */,
+				B9C7C13F2B1B5CDF0019C0A6 /* BAAnimation.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -157,12 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B92809792607176C0027AE13 /* BAAnimation.swift in Sources */,
+				B9C7C1442B1B657D0019C0A6 /* BAAnimater.swift in Sources */,
 				B9841381263BFE6F0067B069 /* BASpring.swift in Sources */,
-				B92809752607176C0027AE13 /* BAAnimationController.swift in Sources */,
-				B92809782607176C0027AE13 /* BasicAnimation.swift in Sources */,
+				B9C7C1402B1B5CDF0019C0A6 /* BAAnimation.swift in Sources */,
 				B92809772607176C0027AE13 /* BATimingCurve.swift in Sources */,
-				B92809762607176C0027AE13 /* BAKeyPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
