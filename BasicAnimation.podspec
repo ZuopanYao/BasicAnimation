@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "BasicAnimation"
-  spec.version      = "0.2.0"
+  spec.version      = "0.2.1"
   spec.summary      = "iOS 属性动画：缩放、旋转、平移、背景颜色、透明度、阴影等，使用 Swift 5.0 实现"
 
   # This description is used to generate tags and improve search results.
@@ -68,7 +68,7 @@ Pod::Spec.new do |spec|
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
-  spec.ios.deployment_target = "10.0"
+  spec.ios.deployment_target = "13.5"
   #spec.osx.deployment_target = "10.12"
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
