@@ -9,6 +9,10 @@ import UIKit
 
 public class BABaseAnimater: NSObject, CAAnimationDelegate {
     
+    public var animation: CAAnimation? {
+        return nil
+    }
+    
     var delay: Double = 0.0
     /// 延迟开始动画，单位为秒，默认为 0.0，即不延迟
     @discardableResult
@@ -17,8 +21,8 @@ public class BABaseAnimater: NSObject, CAAnimationDelegate {
         return self
     }
     
-    var duration: CFTimeInterval = 0.65
-    /// 设置动画时间,默认0.65, 该参数对弹性动画无效
+    var duration: CFTimeInterval = 0.25
+    /// 设置动画时间,默认0.25, 该参数对弹性动画无效
     @discardableResult
     public func duration(_ value: Double) -> Self {
         duration = value
@@ -65,7 +69,17 @@ public class BABaseAnimater: NSObject, CAAnimationDelegate {
         return self
     }
     
+    private var didStartTimeInterval: TimeInterval = 0.0
+    public func animationDidStart(_ anim: CAAnimation) {
+        #if DEBUG
+        didStartTimeInterval = Date().timeIntervalSince1970
+        #endif
+    }
+    
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        #if DEBUG
+        print("Animation Duration: ", Date().timeIntervalSince1970 - didStartTimeInterval)
+        #endif
         animationDidStop?(flag)
     }
     
@@ -101,7 +115,7 @@ public class BAAnimater<T>: BABaseAnimater{
         return self
     }
     
-    public lazy var animation: CAAnimation = {
+    public override var animation: CAAnimation? {
         var animation: CABasicAnimation = CABasicAnimation(keyPath: keyPath)
         
         if let spring = spring {
@@ -130,12 +144,12 @@ public class BAAnimater<T>: BABaseAnimater{
             animation.beginTime = CACurrentMediaTime() + CFTimeInterval(delay)
         }
         return animation
-    }()
+    }
     
     /// 执行动画
     public override func run(on layer: CALayer, animationDidStop: ((Bool) -> Void)? = nil) {
         super.run(on: layer, animationDidStop: animationDidStop)
-        layer.add(animation, forKey: keyPath)
+        layer.add(animation!, forKey: keyPath)
     }
 }
 

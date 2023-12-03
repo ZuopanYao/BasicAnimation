@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		B971290C2618A5BE00F95BC8 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B971290A2618A5BD00F95BC8 /* 1@2x.png */; };
 		B971290D2618A5BE00F95BC8 /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B971290B2618A5BE00F95BC8 /* 2@2x.png */; };
 		B99B31FF2AFF0A36008E8EDA /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B31FE2AFF0A36008E8EDA /* AnimationView.swift */; };
+		B9FC51E92B1C30A300F1C3EE /* CircrleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FC51E82B1C30A300F1C3EE /* CircrleAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		B971290A2618A5BD00F95BC8 /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
 		B971290B2618A5BE00F95BC8 /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@2x.png"; sourceTree = "<group>"; };
 		B99B31FE2AFF0A36008E8EDA /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		B9FC51E82B1C30A300F1C3EE /* CircrleAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircrleAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				B971290A2618A5BD00F95BC8 /* 1@2x.png */,
 				B971290B2618A5BE00F95BC8 /* 2@2x.png */,
 				B928094526059F940027AE13 /* ViewController.swift */,
+				B9FC51E82B1C30A300F1C3EE /* CircrleAnimation.swift */,
 				B99B31FE2AFF0A36008E8EDA /* AnimationView.swift */,
 				B928094726059F940027AE13 /* Main.storyboard */,
 				B928094A26059F970027AE13 /* Assets.xcassets */,
@@ -127,8 +130,9 @@
 		B928093626059F940027AE13 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1220;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					B928093D26059F940027AE13 = {
 						CreatedOnToolsVersion = 12.2;
@@ -174,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B928094626059F940027AE13 /* ViewController.swift in Sources */,
+				B9FC51E92B1C30A300F1C3EE /* CircrleAnimation.swift in Sources */,
 				B99B31FF2AFF0A36008E8EDA /* AnimationView.swift in Sources */,
 				B928094226059F940027AE13 /* AppDelegate.swift in Sources */,
 			);
@@ -238,6 +243,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -252,7 +258,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -299,6 +305,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -307,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -325,6 +332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M8YBU8YTC;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3M8YBU8YTC;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

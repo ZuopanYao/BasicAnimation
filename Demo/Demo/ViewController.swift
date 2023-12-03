@@ -10,31 +10,63 @@ import BasicAnimation
 
 class ViewController: UIViewController {
     
-    var aView: UIView!
+    let contentView: UIView = UIView(frame: UIScreen.main.bounds)
     var myView: UIView!
     var cView: UIView!
     var dView: UIView!
 
+    var btn1: UIButton!
+    
+    lazy var circrleAnimation = CircrleAnimation(contentView,
+                                                 anchorPoint: CGPoint(x: 300, y: 100.0))
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        aView = UIView(frame: CGRect(x: 100, y: 80, width: 180, height: 180))
-        aView.backgroundColor = UIColor.red
-        view.addSubview(aView)
+//        myView = UIView(frame: CGRect(x: 100, y: 230, width: 120, height: 120))
+//        myView.backgroundColor = UIColor.blue
+//        view.addSubview(myView)
+//
+//        
+//        cView = UIView(frame: CGRect(x: 130, y: 400, width: 120, height: 120))
+//        cView.backgroundColor = UIColor.purple
+//        cView.layer.shadowOffset = .zero
+//        view.addSubview(cView)
+//        
+//        dView = UIView(frame: CGRect(x: 0, y: 00, width: 120, height: 120))
+//        dView.backgroundColor = UIColor.yellow
+//        view.addSubview(dView)
         
-        myView = UIView(frame: CGRect(x: 100, y: 230, width: 120, height: 120))
-        myView.backgroundColor = UIColor.blue
-        view.addSubview(myView)
-
+        btn1 = btnInstance
+        btn1.backgroundColor = .purple
+        btn1.titleLabel?.text = "Open"
+        btn1.addTarget(self, action: #selector(`open`), for: .touchUpInside)
+        view.addSubview(btn1)
         
-        cView = UIView(frame: CGRect(x: 130, y: 400, width: 120, height: 120))
-        cView.backgroundColor = UIColor.purple
-        cView.layer.shadowOffset = .zero
-        view.addSubview(cView)
+        contentView.backgroundColor = .blue
+        contentView.layer.opacity = 0.8
+        view.addSubview(contentView)
         
-        dView = UIView(frame: CGRect(x: 0, y: 00, width: 120, height: 120))
-        dView.backgroundColor = UIColor.yellow
-        view.addSubview(dView)
+        let btn = btnInstance
+        contentView.addSubview(btn)
+        btn.addTarget(self, action: #selector(close), for: .touchUpInside)
+    }
+    
+    var btnInstance: UIButton {
+        let btn = UIButton(type: .custom)
+        btn.setTitle("close", for: .normal)
+        btn.setTitleColor(.red, for: .normal)
+        btn.backgroundColor = .gray
+        btn.frame = CGRect(x: 300, y: 100, width: 60, height: 60)
+        return btn
+    }
+    
+    @objc func close() {
+        circrleAnimation.close()
+    }
+    
+    @objc func `open`() {
+        circrleAnimation.open()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,7 +85,6 @@ class ViewController: UIViewController {
         
         let from = UIBezierPath(ovalIn: CGRect(origin: .zero, size: CGSize(width: 180, height: 180)))
         
-        let to = UIBezierPath(ovalIn: CGRect(origin: .zero, size: CGSize(width: 80, height: 80)))
         
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = from.cgPath
@@ -69,15 +100,15 @@ class ViewController: UIViewController {
 ////            aView.layer.mask = nil
 //        }
         
-        let saceAnimater = BAAnimater(.scale.fromValue(1.0).toValue(0.5))
-
-        BAGroupAnimater([pathAnimater, saceAnimater].map { $0.animation })
-            .duration(1.5)
-            .delay(3)
-            .run(on: aView) { flag in
-                print(flag)
-            }
-        
+//        let saceAnimater = BAAnimater(.scale.fromValue(1.0).toValue(0.5))
+//
+//        BAGroupAnimater([pathAnimater, saceAnimater].map { $0.animation })
+//            .duration(1.5)
+//            .delay(3)
+//            .run(on: aView) { flag in
+//                print(flag)
+//            }
+//        
 //        aView.ba.create(animation: .scale(from: CGPoint(x: 1.0, y: 1.0), to: CGPoint(x: 0.4, y: 0.5))).delay(2.0).run()
 
         
@@ -121,3 +152,8 @@ class ViewController: UIViewController {
     }
 }
 
+extension CGRect {
+    var center: CGPoint {
+        return CGPoint(x: origin.x + size.width / 2.0, y: origin.y + size.height / 2.0)
+    }
+}
