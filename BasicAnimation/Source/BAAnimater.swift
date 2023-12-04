@@ -180,3 +180,33 @@ public class BAGroupAnimater: BABaseAnimater {
         layer.add(animation, forKey: nil)
     }
 }
+
+public extension UIView {
+    /// for layer
+    func removeAnimation<T>(_ animation: BAAnimation<T>) {
+        layer.removeAnimation(animation)
+    }
+    
+    /// for layer
+    func removeAnimations<T>(_ animations: [BAAnimation<T>]) {
+        layer.removeAnimations(animations)
+    }
+    
+    /// for layer
+    func removeAllAnimations() {
+        layer.removeAllAnimations()
+    }
+}
+
+public extension CALayer {
+    
+    func removeAnimation<T>(_ animation: BAAnimation<T>) {
+        removeAnimation(forKey: animation.keyPath)
+    }
+    
+    func removeAnimations<T>(_ animations: [BAAnimation<T>]) {
+        animations.forEach {
+            removeAnimation(forKey: $0.keyPath)
+        }
+    }
+}
